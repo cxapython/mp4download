@@ -79,7 +79,7 @@ def download_from_url(url, dst):
 
 if __name__ == '__main__':
     # 异步方式下载
-    url = "http://v11-tt.ixigua.com/7da2b219bc734de0f0d04706a9629b61/5c77ed4b/video/m/220d4f4e99b7bfd49efb110892d892bea9011612eb3100006b7bebf69d81/?rc=am12NDw4dGlqajMzNzYzM0ApQHRAbzU6Ojw8MzQzMzU4NTUzNDVvQGgzdSlAZjN1KWRzcmd5a3VyZ3lybHh3Zjc2QHFubHBfZDJrbV8tLTYxL3NzLW8jbyMxLTEtLzEtLjMvLTUvNi06I28jOmEtcSM6YHZpXGJmK2BeYmYrXnFsOiMzLl4%3D"
+    url = "http://v3-default.ixigua.com/836009b19232e33270460f0a236690d8/5cdd8cee/video/m/2209c3341f61ec7457ba8c82013f91bbef311612fed60000775a4914da33/?rc=MzQ0dTZ1aG9rajMzNzYzM0ApQHRAbzQ4PDQ4MzgzMzU4NTQzNDVvQGg1dilAZzN3KUBmM3UpZHNyZ3lrdXJneXJseHdmNzZAYXBkby5tLy5tXy0tMDEvc3MtbyNvIy0uLy0wLy4uNi8vMzI2LTojbyM6YS1vIzpgLXAjOmB2aVxiZitgXmJmK15xbDojMy5e"
     task = [asyncio.ensure_future(async_download_from_url(url, f"{i}.mp4")) for i in range(1, 12)]
     loop = asyncio.get_event_loop()
     loop.run_until_complete(asyncio.wait(task))
