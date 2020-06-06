@@ -2,7 +2,7 @@
 from __future__ import print_function
 import requests
 from tqdm import tqdm
-from you_get.processor.ffmpeg import ffmpeg_concat_av
+from .ffmpeg import ffmpeg_concat_av
 
 base_url = "https://www.bilibili.com/video/av455536018"
 headers = {"Referer": base_url,
